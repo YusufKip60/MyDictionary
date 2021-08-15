@@ -1,0 +1,34 @@
+using System;
+
+namespace Dictionary
+{
+    class Program
+    {
+        static void Main(string[] args)
+        { 
+            Dictionary<string,int> AdYas = new Dictionary<string,int>();
+
+            AdYas.Add("Yusuf", 16);
+            AdYas.Add("Berat", 16);
+            AdYas.Add("Zeynep", 20);
+
+            foreach(var degeroku in AdYas)
+            {
+                Console.WriteLine(degeroku);
+            }
+
+            var eleman = AdYas.Count();
+            Console.WriteLine();
+            Console.WriteLine("eleman sayısı " + eleman);
+
+            AdYas.Remove("Zeynep");
+            Console.WriteLine();
+            foreach (var degeroku in AdYas)
+            {
+                Console.WriteLine(degeroku);
+            }
+            Console.ReadLine();
+
+        }
+    }
+}
